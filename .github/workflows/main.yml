@@ -1,0 +1,15 @@
+name: Example Workflow
+
+on: [push]
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  example_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      # Add other steps as necessary
