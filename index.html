@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Values</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .value { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>QR Code Values</h1>
+    <div class="value" id="valueA">Value A: Not provided</div>
+    <div class="value" id="valueB">Value B: Not provided</div>
+    <div class="value" id="valueC">Value C: Not provided</div>
+
+    <script>
+        // Parse the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const a = urlParams.get('a');
+        const b = urlParams.get('b');
+        const c = urlParams.get('c');
+
+        // Display the values on your page
+        if (a) document.getElementById('valueA').textContent = `Value A: ${a}`;
+        if (b) document.getElementById('valueB').textContent = `Value B: ${b}`;
+        if (c) document.getElementById('valueC').textContent = `Value C: ${c}`;
+    </script>
+</body>
+</html>
